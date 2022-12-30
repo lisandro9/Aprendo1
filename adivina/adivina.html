@@ -9,9 +9,19 @@
 <body>
 <h1>Bienvenido a adivina el numero</h1>
 <p>Bienvenido, este juego consiste en que adivines el numero, se te avisara si el numero es mayor o menor, tienes 10 vidas, BUENA SUERTE :D</p>
-    <button onclick="iniciar()">Iniciar
-    </button>
-
-    
+<p> <strong>Adivina de los numeros 1 a 100</strong> </p>
+<form style="width: 500px; text-align: center;">
+<fieldset>
+	<label for="input-number">Ingrese el numero</label>
+	<input type="text" maxlength="3"/>
+</fieldset>
+<button type="submit">Verificar</button>
+</form>
+<div>
+	<h2>Historial de intentos</h2>
+	<ul id="attemp-history">
+	</ul>
+</div>
+<div id="message-text"></div>
 </body>
 </html>
