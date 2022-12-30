@@ -4,16 +4,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Adivina el numero :D</title>
-	<script src="elnumero.js"></script> 
 </head>
 <body>
 <h1>Bienvenido a adivina el numero</h1>
 <p>Bienvenido, este juego consiste en que adivines el numero, se te avisara si el numero es mayor o menor, tienes 10 vidas, BUENA SUERTE :D</p>
 <p> <strong>Adivina de los numeros 1 a 100</strong> </p>
-<form style="width: 500px; text-align: center;">
+<h3 id="life-counter">Vidas: </h3>
+<form id="FormItem" style="width: 500px; text-align: center;">
 <fieldset>
 	<label for="input-number">Ingrese el numero</label>
-	<input type="text" maxlength="3"/>
+	<input id="input-number" type="text" maxlength="3" value="6"/>
 </fieldset>
 <button type="submit">Verificar</button>
 </form>
@@ -23,5 +23,6 @@
 	</ul>
 </div>
 <div id="message-text"></div>
+<script src="elnumero.js"></script>
 </body>
 </html>
