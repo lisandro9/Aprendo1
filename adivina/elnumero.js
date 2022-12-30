@@ -19,9 +19,21 @@ function updateLifeCounter(lifeCount){
 	h3Tag.textContent = text;
 }
 
+function addHistoryElement(attempNumber) {
+	const liTag = document.createElement('li');
+	const pTag = document.createElement('p');
+	pTag.textContent = 'Intento: ' + attempNumber;
+	liTag.appendChild(pTag);
+	ulTag.appendChild(liTag);
+
+}
+
 formTag.addEventListener('submit', (evt)=> {
 	evt.preventDefault();
 	let currentValue = inputTag.value;
+	if(vidas <= 0){
+		return;
+	}
 	// validar si hay vidas
 	if (secretNumber == currentValue){
 		// mostrar aviso
@@ -29,6 +41,7 @@ formTag.addEventListener('submit', (evt)=> {
 	} else {
 		//valio verga
 		vidas--;
+	addHistoryElement(currentValue);
 		updateLifeCounter(vidas);
 		if(vidas <= 0){
 			// se acabo
